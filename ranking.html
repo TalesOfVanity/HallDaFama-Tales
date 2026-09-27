@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ranking dos jogadores e insígnias do RPG.">
+  <title>Rank dos Jogadores — As Crônicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="paper-noise"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span><span><strong>AS CRÔNICAS</strong><small>Registro do Reino</small></span></a>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="index.html">O Livro</a><a href="hall.html">Hall da Fama</a><a class="active" href="ranking.html">Jogadores</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">✦ Livro III · A ordem dos jogadores ✦</p>
+      <h1>Rank dos Jogadores</h1>
+      <p>Renome mede a atividade. As insígnias contam como cada jogador deixou sua marca.</p>
+    </section>
+
+    <section class="section ranking-section">
+      <div class="season-banner">
+        <div><span class="season-label">Temporada atual</span><strong>Patch 01 · O Primeiro Capítulo</strong></div>
+        <div class="dragon-holder"><img src="assets/badges/noun_dragon_5305836_@700.png" alt="Dragão"><span><small>Dragão atual</small><b>Player One</b></span></div>
+      </div>
+
+      <div class="podium" id="podium"></div>
+
+      <div class="ranking-tools">
+        <div><p class="eyebrow">Classificação</p><h2>Registro de Renome</h2></div>
+        <div class="search-wrap"><input id="player-search" type="search" placeholder="Procurar jogador..." aria-label="Procurar jogador"></div>
+      </div>
+
+      <div class="ranking-list" id="ranking-list"></div>
+    </section>
+
+    <section class="section renown-section">
+      <div class="section-heading"><div><p class="eyebrow">Como funciona</p><h2>Renome & Legado</h2></div></div>
+      <div class="system-grid">
+        <article class="system-card"><span class="system-icon">✦</span><h3>Renome</h3><p>Pontos que determinam a posição atual no ranking. É influenciado pela atividade, participação em eventos e marcos do RPG.</p></article>
+        <article class="system-card"><span class="system-icon">♜</span><h3>Legado</h3><p>Registra feitos permanentes e acontecimentos históricos. Um jogador pode perder atividade sem apagar aquilo que construiu.</p></article>
+        <article class="system-card"><span class="system-icon">🐉</span><h3>Dragão</h3><p>A insígnia especial do MVP atual. Seu portador muda conforme o próximo patch ou atualização.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="player-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="player-sheet" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button class="modal-close" data-close-modal aria-label="Fechar">×</button>
+      <div id="player-detail"></div>
+    </article>
+  </div>
+
+  <footer class="site-footer"><span>✦ AS CRÔNICAS</span><span>Rank dos Jogadores</span></footer>
+  <script src="js/main.js"></script>
+  <script src="js/ranking.js"></script>
+</body>
+</html>
